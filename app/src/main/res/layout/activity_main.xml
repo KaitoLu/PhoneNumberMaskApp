@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:background="@drawable/background2" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_margin="30dp"
+        android:alpha="0.7"
+        android:background="@drawable/radius_10_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="會員登入"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/input_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <TextView
+        android:id="@+id/InputLeftTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="8dp"
+        android:drawableStart="@drawable/baseline_phone_android_24"
+        android:drawableTint="@color/dark_green"
+        android:text="帳號 : "
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/input_phone"
+        app:layout_constraintEnd_toStartOf="@+id/input_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_phone"
+        app:layout_constraintVertical_bias="0.426" />
+
+    <EditText
+        android:id="@+id/input_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:gravity="end"
+        android:hint="請輸入您的手機號碼"
+        android:textColor="@color/dark_green"
+        android:textColorHint="@color/light_green"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:imeOptions="actionNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/InputLeftTitleText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <Button
+        android:id="@+id/button_account_visibility_toggle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/ic_password_visibility_off_24"
+        app:layout_constraintBottom_toBottomOf="@+id/input_phone"
+        app:layout_constraintStart_toEndOf="@+id/input_phone"
+        app:layout_constraintTop_toTopOf="@+id/input_phone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:drawableStart="@drawable/baseline_lock_outline_24"
+        android:drawableTint="@color/dark_green"
+        android:text="密碼 : "
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/input_password"
+        app:layout_constraintEnd_toStartOf="@+id/input_password"
+        app:layout_constraintStart_toStartOf="@+id/InputLeftTitleText"
+        app:layout_constraintTop_toTopOf="@+id/input_password" />
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="end"
+        android:hint="請輸入您的手機號碼"
+        android:textColor="@color/dark_green"
+        android:textColorHint="@color/light_green"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:imeOptions="actionDone"
+        app:layout_constraintEnd_toEndOf="@+id/input_phone"
+        app:layout_constraintStart_toStartOf="@+id/input_phone"
+        app:layout_constraintTop_toBottomOf="@+id/input_phone" />
+
+    <Button
+        android:id="@+id/button_password_visibility_toggle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/ic_password_visibility_off_24"
+        app:layout_constraintBottom_toBottomOf="@+id/input_password"
+        app:layout_constraintStart_toEndOf="@+id/input_phone"
+        app:layout_constraintTop_toTopOf="@+id/input_password" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="登入"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="輸入手機號碼時正常顯示內容\n輸入完內容後會自動遮蔽其中3碼內容\n且可以在非編輯狀態下開關遮蔽功能"
+        android:textColor="#F6E86B"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

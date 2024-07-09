@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyDialogTheme" parent="Theme.Material3.Dark.Dialog">
+        <item name="colorAccent">@color/dark_green</item>
+        <item name="android:textColorPrimary">@color/dark_green</item>
+        <item name="android:colorPrimary">@color/dark_green</item>
+
+    </style>
+
+</resources>
