@@ -18,17 +18,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    afterEvaluate {
-        publishing {
-            publications {
-                create<MavenPublication>("maven") {
-                    groupId = "com.github.KaitoLu"
-                    artifactId = "phone-number-mask-app"
-                    version = "1.0.2"
-                }
-            }
-        }
-    }
+
 
     buildTypes {
         release {
@@ -58,4 +48,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = "com.github.KaitoLu"
+                artifactId = "phone-number-mask-app"
+                version = "1.0.3"
+            }
+        }
+    }
 }
