@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    `maven-publish`
+
 }
 
 android {
@@ -15,6 +17,17 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    afterEvaluate {
+        publishing {
+            publications {
+                create<MavenPublication>("maven") {
+                    groupId = "com.github.KaitoLu"
+                    artifactId = "phone-number-mask-app"
+                    version = "1.0.2"
+                }
+            }
+        }
     }
 
     buildTypes {
